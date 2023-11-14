@@ -1,2 +1,2 @@
 def add(x,y):
-    return x + y
+    return float(x) + float(y)
