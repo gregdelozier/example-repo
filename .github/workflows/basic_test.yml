@@ -1,7 +1,7 @@
 name: basic_test
 
 on:
-  # push:
+  push:
   # pull_request:
   #   branches: [ "**" ]
   workflow_dispatch:
