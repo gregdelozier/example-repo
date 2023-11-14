@@ -1,0 +1,25 @@
+name: basic_test
+
+on:
+  # push:
+  # pull_request:
+  #   branches: [ "**" ]
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get sample repo
+        uses: actions/checkout@v2
+        with: 
+          repository: gregdelozier/sample-repo
+
+      - name: Test python version
+        run: |
+          python --version
+
+      - name: Test math functions
+        run: |
+          pip install pytest
+          pytest test_mathstuff.py
