@@ -10,10 +10,8 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get sample repo
+      - name: Get code from repo
         uses: actions/checkout@v2
-        with: 
-          repository: gregdelozier/sample-repo
 
       - name: Test python version
         run: |
